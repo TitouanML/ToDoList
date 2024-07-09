@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hiddenSection{
+    opacity: 0;
+    transition: opacity ease-in-out 0.3s;
+}
+
+.task:hover .hiddenSection{
+    opacity:1;
+}
+
+
+/* WebKit browsers (Chrome, Safari) */
+.column::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .column::-webkit-scrollbar-track {
+    background: #2d3748; /* Dark grey background */
+    border-radius: 10px;
+  }
+  
+  .column::-webkit-scrollbar-thumb {
+    background-color: #718096; /* Light grey color */
+    border-radius: 10px;
+    border: 2px solid #2d3748; /* Matches the track color */
+  }
+  
+  /* Firefox */
+  .column {
+    scrollbar-width: thin;
+    scrollbar-color: #718096 #2d3748;
+  }
+  
+  /* For custom styling of scrollbar thumb in Firefox */
+  .column::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 2px solid #2d3748;
+    background-color: #718096;
+  }
+  

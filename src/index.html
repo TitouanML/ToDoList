@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./public/javascript/editTask.js"></script>
+    <script src="./public/javascript/removeTask.js"></script>
+    <script src="./public/javascript/addTask.js"></script>
+    <script src="./public/javascript/draggingTask.js"></script>
+
+    <title>ToDo List</title>
+  </head>
+
+  <body class="bg-slate-300 m-0 p-0 w-full h-full">
+    <header
+      class="w-screen h-14 flex flex-row justify-between items-center bg-slate-400 shadow-lg"
+    >
+    <img src="./public/images/logo.png" alt="Logo loading..." class="w-24" title="TM">
+      <h1 class="text-white font-semibold text-3xl">To Do List</h1>
+      <button
+      title="Ajouter une tâche"
+        onclick="popUpAdd()"
+        class="md:hover:scale-105 bg-blue-400 hover:bg-blue-500 p-1 rounded-md shadow-lg text-slate-300 hover:text-slate-400 transition-all mr-2"
+      >
+        <span>Ajouter une tâche</span>
+      </button>
+    </header>
+    <main class="m-0 p-4 w-full h-full">
+      <section
+        id="mainSection"
+        class="flex flex-row md:justify-around space-x-4"
+      >
+        
+        <article
+          id="col1"
+          class="lg:w-3/12 w-56 h-[80vh] bg-slate-600 rounded-sm flex flex-col items-center column overflow-auto p-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div
+            id="colHeader"
+            class="bg-red-500 w-full md:min-h-10 min-h-4 mb-1 rounded-sm flex items-center justify-center text-white shadow-lg transition-all"
+          >
+            A faire
+          </div>
+        </article>
+
+        <article
+          id="col2"
+          class="lg:w-3/12 w-56 h-[80vh] bg-slate-600 rounded-sm flex flex-col items-center column overflow-auto p-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div
+            id="colHeader"
+            class="bg-blue-500 w-full md:min-h-10 min-h-4 mb-1 rounded-sm flex items-center justify-center text-white shadow-lg transition-all"
+          >
+            En cours
+          </div>
+        </article>
+        <article
+          id="col3"
+          class="lg:w-3/12 w-56 h-[80vh] bg-slate-600 rounded-sm flex flex-col items-center column overflow-auto p-2"
+          ondrop="drop(event)"
+          ondragover="allowDrop(event)"
+        >
+          <div
+            id="colHeader"
+            class="bg-green-500 w-full md:min-h-10 min-h-4 mb-1 rounded-sm flex items-center justify-center text-white shadow-lg transition-all"
+          >
+            Terminé
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
